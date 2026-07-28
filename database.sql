@@ -1,5 +1,5 @@
 -- ============================================================
--- IMPULSO LATINO - Supabase Database Schema
+-- FINANCIAL BOOST - Supabase Database Schema
 -- Paste this entire file into your Supabase SQL Editor and run it.
 -- ============================================================
 

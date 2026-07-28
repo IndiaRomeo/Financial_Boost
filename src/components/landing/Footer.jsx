@@ -26,8 +26,8 @@ export default function Footer({ adminRoute }) {
               <a href={`https://wa.me/${contact.whatsapp}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-primary-200 hover:text-white transition-colors">
                 <Phone size={16} /><span className="text-sm">{contact.whatsappLabel}</span>
               </a>
-              <a href="mailto:info@impulsolatino.com" className="flex items-center gap-3 text-primary-200 hover:text-white transition-colors">
-                <Mail size={16} /><span className="text-sm">info@impulsolatino.com</span>
+              <a href="mailto:info@financialboost" className="flex items-center gap-3 text-primary-200 hover:text-white transition-colors">
+                <Mail size={16} /><span className="text-sm">info@financialboost</span>
               </a>
               <div className="flex items-center gap-3 text-primary-200">
                 <Clock size={16} /><span className="text-sm">Lun–Vie: 9am – 6pm EST</span>

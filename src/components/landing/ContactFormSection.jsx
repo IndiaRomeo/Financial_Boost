@@ -64,8 +64,8 @@ export default function ContactFormSection({ adminRoute }) {
                 </div>
                 <div>
                   <h4 className="font-bold text-primary mb-1">Email</h4>
-                  <a href="mailto:info@impulsolatino.com" className="text-secondary hover:underline font-medium">
-                    info@impulsolatino.com
+                  <a href="mailto:info@financialboost" className="text-secondary hover:underline font-medium">
+                    info@financialboost
                   </a>
                   <p className="text-gray-400 text-sm mt-1">Respuesta en 24 horas</p>
                 </div>
