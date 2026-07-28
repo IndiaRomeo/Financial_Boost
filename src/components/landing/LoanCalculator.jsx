@@ -18,7 +18,7 @@ export default function LoanCalculator() {
   const total = (amount + totalInterest).toFixed(2)
 
   return (
-    <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 text-white">
+    <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 text-white shadow-2xl shadow-black/40">
       <h3 className="text-xl font-bold mb-1">Simula tu préstamo</h3>
       <p className="text-primary-200 text-sm mb-5">Mueve la barra y mira cuánto pagarías al mes</p>
 
@@ -50,7 +50,7 @@ export default function LoanCalculator() {
               type="button"
               onClick={() => setTerm(t)}
               className={`py-2 rounded-lg font-semibold text-sm transition-all ${
-                term === t ? 'bg-accent text-white' : 'bg-white/10 hover:bg-white/20 text-primary-100'
+                term === t ? 'bg-accent text-primary' : 'bg-white/10 hover:bg-white/20 text-primary-100'
               }`}
             >
               {t} meses
