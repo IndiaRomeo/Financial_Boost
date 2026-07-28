@@ -34,10 +34,10 @@ export default async function handler(req, res) {
       subject: 'Restablece tu contraseña de Financial Boost',
       html: `
         <div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;padding:32px 16px;">
-          <h2 style="color:#7f1d1d;margin-bottom:8px;">¿Olvidaste tu contraseña?</h2>
+          <h2 style="color:#0f1f3a;margin-bottom:8px;">¿Olvidaste tu contraseña?</h2>
           <p style="color:#444;">Nos pidieron restablecer la contraseña de tu cuenta en <strong>Financial Boost</strong>. Si fuiste tú, crea una nueva desde el botón de abajo.</p>
           <a href="${data.properties.action_link}"
-             style="display:inline-block;background:#d97706;color:white;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:bold;font-size:16px;margin:16px 0;">
+             style="display:inline-block;background:#16a34a;color:white;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:bold;font-size:16px;margin:16px 0;">
             Crear nueva contraseña
           </a>
           <p style="color:#888;font-size:13px;margin-top:24px;">Este enlace vence en 1 hora. Si no fuiste tú quien lo solicitó, simplemente ignora este mensaje.</p>

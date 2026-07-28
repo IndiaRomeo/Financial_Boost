@@ -12,7 +12,7 @@ export default defineConfig({
         name: 'Financial Boost - Impulso Financiero',
         short_name: 'Financial Boost',
         description: 'Préstamos rápidos para latinos en Estados Unidos. Aprobación rápida y atención personalizada.',
-        theme_color: '#7f1d1d',
+        theme_color: '#0f1f3a',
         background_color: '#ffffff',
         display: 'standalone',
         scope: '/',

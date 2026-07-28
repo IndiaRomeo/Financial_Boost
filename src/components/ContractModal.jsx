@@ -9,31 +9,31 @@ function buildContractHTML({ clientName, clientEmail, amount, term, rate, monthl
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Times New Roman', Times, serif; font-size: 12pt; color: #1a1a1a; background: white; padding: 40px 60px; line-height: 1.7; }
-    .header { text-align: center; margin-bottom: 40px; padding-bottom: 20px; border-bottom: 2px solid #7f1d1d; }
+    .header { text-align: center; margin-bottom: 40px; padding-bottom: 20px; border-bottom: 2px solid #0f1f3a; }
     .logo-text { font-size: 28pt; font-weight: 900; }
-    .logo-il { color: #7f1d1d; }
-    .logo-an { color: #d97706; }
+    .logo-il { color: #0f1f3a; }
+    .logo-an { color: #16a34a; }
     .logo-sub { font-size: 9pt; color: #666; letter-spacing: 3px; text-transform: uppercase; margin-top: 4px; }
     .contract-number { font-size: 9pt; color: #999; margin-top: 6px; }
-    h1 { font-size: 16pt; text-align: center; text-transform: uppercase; letter-spacing: 2px; margin: 30px 0 20px; color: #7f1d1d; border-bottom: 1px solid #7f1d1d; padding-bottom: 8px; }
-    h2 { font-size: 12pt; text-transform: uppercase; letter-spacing: 1px; color: #7f1d1d; margin: 24px 0 8px; }
+    h1 { font-size: 16pt; text-align: center; text-transform: uppercase; letter-spacing: 2px; margin: 30px 0 20px; color: #0f1f3a; border-bottom: 1px solid #0f1f3a; padding-bottom: 8px; }
+    h2 { font-size: 12pt; text-transform: uppercase; letter-spacing: 1px; color: #0f1f3a; margin: 24px 0 8px; }
     p { margin-bottom: 10px; text-align: justify; }
-    .parties { background: #fdf4f4; border-left: 4px solid #7f1d1d; padding: 16px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+    .parties { background: #f2f5fa; border-left: 4px solid #0f1f3a; padding: 16px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
     .conditions-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 16px 0; }
-    .condition-item { background: #fdf4f4; padding: 12px 16px; border-radius: 8px; border: 1px solid #e7e0e0; }
+    .condition-item { background: #f2f5fa; padding: 12px 16px; border-radius: 8px; border: 1px solid #dde4ee; }
     .condition-label { font-size: 9pt; color: #666; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
-    .condition-value { font-size: 13pt; font-weight: bold; color: #7f1d1d; }
-    .highlight { background: #7f1d1d; color: white; padding: 16px 20px; border-radius: 8px; margin: 20px 0; }
+    .condition-value { font-size: 13pt; font-weight: bold; color: #0f1f3a; }
+    .highlight { background: #0f1f3a; color: white; padding: 16px 20px; border-radius: 8px; margin: 20px 0; }
     .highlight .label { font-size: 9pt; opacity: 0.8; margin-bottom: 4px; }
     .highlight .value { font-size: 16pt; font-weight: 900; }
-    .alert-box { background: #fff8e1; border: 1px solid #d97706; border-radius: 8px; padding: 14px 18px; margin: 16px 0; }
-    .divider { border: none; border-top: 1px solid #e7e0e0; margin: 24px 0; }
+    .alert-box { background: #fff8e1; border: 1px solid #16a34a; border-radius: 8px; padding: 14px 18px; margin: 16px 0; }
+    .divider { border: none; border-top: 1px solid #dde4ee; margin: 24px 0; }
     .signatures { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 60px; }
     .sig-block { text-align: center; }
     .sig-line { border-top: 1px solid #1a1a1a; margin-bottom: 8px; width: 100%; }
     .sig-name { font-weight: bold; font-size: 11pt; }
     .sig-role { font-size: 9pt; color: #666; }
-    .footer { margin-top: 40px; padding-top: 16px; border-top: 2px solid #7f1d1d; text-align: center; font-size: 8pt; color: #999; }
+    .footer { margin-top: 40px; padding-top: 16px; border-top: 2px solid #0f1f3a; text-align: center; font-size: 8pt; color: #999; }
     @media print {
       body { padding: 20px 40px; }
       @page { margin: 1.5cm; size: Letter; }
@@ -172,7 +172,7 @@ export default function ContractModal({ clientName, clientEmail, loan, onClose }
           <div className="flex items-center gap-2">
             <button
               onClick={printContract}
-              className="flex items-center gap-2 bg-accent hover:bg-yellow-500 text-white font-bold px-4 py-2 rounded-xl text-sm transition-colors"
+              className="flex items-center gap-2 bg-accent hover:bg-accent-600 text-primary font-bold px-4 py-2 rounded-xl text-sm transition-colors"
             >
               <Printer size={15}/> Descargar / Imprimir
             </button>
