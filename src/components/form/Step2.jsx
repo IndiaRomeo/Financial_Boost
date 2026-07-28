@@ -19,8 +19,8 @@ export default function Step2({ data, update, onNext, onBack }) {
 
   return (
     <div>
-      <h2 className="text-2xl font-bold text-primary mb-1">Situación Laboral</h2>
-      <p className="text-gray-500 mb-6">Necesitamos entender tu situación de trabajo.</p>
+      <h2 className="text-2xl font-bold text-primary mb-1">Ahora, tu situación laboral</h2>
+      <p className="text-gray-500 mb-6">Esto nos ayuda a ofrecerte las mejores condiciones.</p>
 
       <div className="space-y-6">
         <div>

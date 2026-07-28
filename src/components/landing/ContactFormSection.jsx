@@ -32,10 +32,10 @@ export default function ContactFormSection({ adminRoute }) {
     <section id="contacto" className="py-20 bg-gray-50" ref={ref}>
       <div className="max-w-6xl mx-auto px-4">
         <div className={`text-center mb-14 transition-all duration-700 ${visible ? 'animate-fade-up' : 'opacity-0 translate-y-8'}`}>
-          <p className="text-secondary font-semibold uppercase tracking-wider text-sm mb-2">Estamos aquí para ti</p>
-          <h2 className="section-title mb-4">Contáctanos</h2>
+          <p className="text-secondary font-semibold uppercase tracking-wider text-sm mb-2">¿Tienes dudas?</p>
+          <h2 className="section-title mb-4">Hablemos</h2>
           <p className="text-gray-500 max-w-xl mx-auto">
-            ¿Tienes preguntas o dudas? Escríbenos y un asesor te responderá a la brevedad.
+            Escríbenos por el medio que prefieras. Un asesor real te va a responder, no un robot.
           </p>
         </div>
 
@@ -52,7 +52,7 @@ export default function ContactFormSection({ adminRoute }) {
                   <a href={`https://wa.me/${contact.whatsapp}`} target="_blank" rel="noopener noreferrer" className="text-secondary hover:underline font-medium">
                     {contact.whatsappLabel}
                   </a>
-                  <p className="text-gray-400 text-sm mt-1">Respuesta en minutos</p>
+                  <p className="text-gray-400 text-sm mt-1">La vía más rápida para hablar con nosotros</p>
                 </div>
               </div>
             </div>

@@ -17,8 +17,8 @@ export default function Step1({ data, update, onNext }) {
 
   return (
     <div>
-      <h2 className="text-2xl font-bold text-primary mb-1">Datos Personales</h2>
-      <p className="text-gray-500 mb-6">Este proceso toma menos de 2 minutos.</p>
+      <h2 className="text-2xl font-bold text-primary mb-1">Empecemos por conocerte</h2>
+      <p className="text-gray-500 mb-6">Te toma menos de 2 minutos, lo prometemos.</p>
 
       <div className="space-y-5">
         <div>
@@ -29,7 +29,7 @@ export default function Step1({ data, update, onNext }) {
         <div>
           <label className="label"><Mail size={13} className="inline mr-1" />Correo electronico</label>
           <input type="email" placeholder="tu@email.com" value={data.email} onChange={e => update('email', e.target.value)} className="input-field" />
-          <p className="text-xs text-gray-400 mt-1">Con este correo iniciaras sesion para ver tu solicitud.</p>
+          <p className="text-xs text-gray-400 mt-1">Lo usarás para entrar y revisar el estado de tu solicitud.</p>
         </div>
 
         <div className="grid sm:grid-cols-2 gap-4">

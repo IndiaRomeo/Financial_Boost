@@ -19,8 +19,8 @@ export default function Step3({ data, update, onNext, onBack }) {
 
   return (
     <div>
-      <h2 className="text-2xl font-bold text-primary mb-1">Perfil Bancario y Crediticio</h2>
-      <p className="text-gray-500 mb-6">Información sobre tu cuenta bancaria en USA.</p>
+      <h2 className="text-2xl font-bold text-primary mb-1">Un poco sobre tu banco</h2>
+      <p className="text-gray-500 mb-6">Así sabemos cómo hacerte llegar el dinero.</p>
 
       <div className="space-y-6">
         <div>
@@ -67,7 +67,7 @@ export default function Step3({ data, update, onNext, onBack }) {
 
         {data.cuentaActiva === 'No' && (
           <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-4">
-            <p className="text-yellow-800 text-sm font-medium">Una cuenta bancaria activa en USA es necesaria para recibir el préstamo. Te recomendamos abrir una cuenta antes de aplicar.</p>
+            <p className="text-yellow-800 text-sm font-medium">Necesitas una cuenta bancaria activa para recibir tu dinero. Te sugerimos abrir una antes de continuar con la solicitud.</p>
           </div>
         )}
 
@@ -78,7 +78,7 @@ export default function Step3({ data, update, onNext, onBack }) {
               <OptionCard key={v} label={v} value={v} selected={data.historialCredito === v} onClick={val => update('historialCredito', val)} />
             ))}
           </div>
-          <p className="text-xs text-gray-400 mt-2">No te preocupes si no tienes historial crediticio, igual podemos ayudarte.</p>
+          <p className="text-xs text-gray-400 mt-2">¿Sin historial crediticio? No es impedimento, seguimos evaluando tu caso.</p>
         </div>
       </div>
 

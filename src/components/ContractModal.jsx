@@ -56,7 +56,7 @@ function buildContractHTML({ clientName, clientEmail, amount, term, rate, monthl
     <p><strong>y el cliente:</strong> ${clientName}${clientEmail ? ` &lt;${clientEmail}&gt;` : ''}.</p>
   </div>
 
-  <p><strong>Objeto del contrato:</strong> El presente contrato tiene como objeto formalizar la solicitud y aprobación del crédito personal solicitado por el cliente, bajo las condiciones establecidas a continuación.</p>
+  <p><strong>Objeto del contrato:</strong> Mediante este documento se formaliza el crédito personal aprobado al cliente, bajo los términos y condiciones descritos a continuación.</p>
 
   <h2>Condiciones del Crédito</h2>
 
@@ -84,30 +84,30 @@ function buildContractHTML({ clientName, clientEmail, amount, term, rate, monthl
     <div class="value">$${total} USD</div>
   </div>
 
-  <p>El monto total de <strong>$${total} USD</strong> será cancelado mes a mes en cuotas de <strong>$${monthly} USD</strong> durante <strong>${term} meses</strong>.</p>
+  <p>El total de <strong>$${total} USD</strong> se pagará en cuotas mensuales de <strong>$${monthly} USD</strong>, a lo largo de <strong>${term} meses</strong>.</p>
 
   <hr class="divider">
 
   <h2>Forma y Condiciones de Pago</h2>
 
-  <p><strong>Forma de pago:</strong> Los pagos se realizarán mediante envíos a través de Western Union.</p>
-  <p><strong>Destino de pagos:</strong> Los pagos deberán ser enviados a Colombia, al beneficiario que le proporcionaremos.</p>
-  <p><strong>Fecha de desembolso:</strong> El desembolso del crédito se realizará directamente a su cuenta bancaria el día <strong>${disbursementDate}</strong>.</p>
-  <p><strong>Fecha de pago mensual:</strong> Los pagos deberán realizarse el <strong>15 de cada mes</strong>, con un plazo máximo de 3 días posteriores para cumplir con la fecha límite de pago.</p>
+  <p><strong>Método de pago:</strong> Los pagos mensuales se realizan a través de Western Union.</p>
+  <p><strong>Destino:</strong> El envío se dirige a Colombia, al beneficiario que le será indicado.</p>
+  <p><strong>Desembolso:</strong> El crédito se depositará directamente en su cuenta bancaria el <strong>${disbursementDate}</strong>.</p>
+  <p><strong>Fecha de corte:</strong> Cada cuota vence el <strong>día 15</strong> del mes correspondiente, con un margen de 3 días adicionales antes de considerarse atrasada.</p>
 
   <hr class="divider">
 
   <h2>Condiciones Adicionales</h2>
 
   <div class="alert-box">
-    <p><strong>Incumplimiento de pago:</strong> En caso de incumplir con el pago de alguna cuota, se procederá a reportar el incumplimiento a las centrales de riesgo crediticio. Este reporte puede afectar su historial y su capacidad para acceder a futuros créditos.</p>
+    <p><strong>Sobre los pagos atrasados:</strong> El incumplimiento de una cuota será reportado a las centrales de riesgo crediticio, lo cual puede afectar su historial y su acceso a crédito en el futuro.</p>
   </div>
 
   <h2>Declaraciones del Cliente</h2>
 
-  <p>El cliente, <strong>${clientName}</strong>, declara haber recibido la información completa y clara sobre las condiciones del crédito y acepta las condiciones mencionadas en este contrato.</p>
+  <p><strong>${clientName}</strong> confirma haber recibido y comprendido toda la información sobre las condiciones de este crédito, y acepta los términos aquí descritos.</p>
 
-  <p>El cliente se compromete a realizar los pagos mensuales de acuerdo con lo estipulado en este contrato, mediante los envíos a través de Western Union, según las instrucciones proporcionadas por Financial Boost.</p>
+  <p>El cliente se compromete a realizar sus pagos mensuales a través de Western Union, siguiendo las instrucciones que le proporcione Financial Boost en cada caso.</p>
 
   <div class="signatures">
     <div class="sig-block">
@@ -204,7 +204,7 @@ export default function ContractModal({ clientName, clientEmail, loan, onClose }
             </div>
 
             <p className="text-sm mb-5 leading-relaxed">
-              <strong>Objeto del contrato:</strong> El presente contrato tiene como objeto formalizar la solicitud y aprobación del crédito personal solicitado por el cliente, bajo las condiciones establecidas a continuación.
+              <strong>Objeto del contrato:</strong> Mediante este documento se formaliza el crédito personal aprobado al cliente, bajo los términos y condiciones descritos a continuación.
             </p>
 
             <h2 className="text-xs font-bold text-primary uppercase tracking-wider mb-3">Condiciones del Crédito</h2>
@@ -231,21 +231,21 @@ export default function ContractModal({ clientName, clientEmail, loan, onClose }
             <div className="border-t border-gray-100 pt-4 mb-4">
               <h2 className="text-xs font-bold text-primary uppercase tracking-wider mb-3">Forma y Condiciones de Pago</h2>
               <div className="space-y-2 text-sm">
-                <p><strong>Forma de pago:</strong> Envíos a través de Western Union.</p>
-                <p><strong>Destino:</strong> Colombia, al beneficiario que le proporcionaremos.</p>
-                <p><strong>Fecha de desembolso:</strong> {disbDate}.</p>
-                <p><strong>Pago mensual:</strong> El 15 de cada mes, con plazo máximo de 3 días.</p>
+                <p><strong>Método de pago:</strong> Western Union.</p>
+                <p><strong>Destino:</strong> Colombia, al beneficiario que le será indicado.</p>
+                <p><strong>Desembolso:</strong> {disbDate}.</p>
+                <p><strong>Fecha de corte:</strong> Día 15 de cada mes, con 3 días de margen.</p>
               </div>
             </div>
 
             <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-3 mb-4">
-              <p className="text-xs font-bold text-yellow-800 mb-1">Incumplimiento de pago</p>
-              <p className="text-xs text-yellow-700">En caso de incumplir con el pago de alguna cuota, se procederá a reportar el incumplimiento a las centrales de riesgo crediticio.</p>
+              <p className="text-xs font-bold text-yellow-800 mb-1">Sobre los pagos atrasados</p>
+              <p className="text-xs text-yellow-700">Una cuota vencida se reporta a las centrales de riesgo crediticio y puede afectar su historial.</p>
             </div>
 
             <div className="border-t border-gray-100 pt-4 mb-6">
               <p className="text-sm leading-relaxed">
-                El cliente, <strong>{clientName}</strong>, declara haber recibido la información completa y clara sobre las condiciones del crédito y acepta las condiciones mencionadas en este contrato. El cliente se compromete a realizar los pagos mensuales de acuerdo con lo estipulado, mediante envíos a través de Western Union.
+                <strong>{clientName}</strong> confirma haber recibido y comprendido las condiciones de este crédito, y acepta los términos aquí descritos. El cliente se compromete a realizar sus pagos mensuales a través de Western Union, según las instrucciones que le sean proporcionadas.
               </p>
             </div>
 

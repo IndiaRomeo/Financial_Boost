@@ -15,8 +15,8 @@ export default function Footer({ adminRoute }) {
               <Logo className="h-12 w-auto" />
             </div>
             <p className="text-primary-200 text-sm leading-relaxed">
-              Prestamistas directos para la comunidad latina en Estados Unidos.
-              Sin intermediarios, sin letras pequeñas.
+              Capital directo para la comunidad hispana en Estados Unidos.
+              Sin bancos de por medio, sin condiciones ocultas.
             </p>
           </div>
 
@@ -40,9 +40,9 @@ export default function Footer({ adminRoute }) {
             <div className="flex items-start gap-2 bg-white/5 rounded-xl p-4">
               <Shield size={16} className="text-accent flex-shrink-0 mt-0.5" />
               <p className="text-primary-200 text-xs leading-relaxed">
-                Financial Boost ofrece servicios de evaluación y gestión de préstamos.
-                Los términos pueden variar según el perfil del cliente. Datos protegidos
-                con cifrado SSL de 256 bits.
+                Financial Boost evalúa y gestiona solicitudes de préstamo personal.
+                Las condiciones finales dependen del perfil de cada solicitante.
+                Toda tu información viaja cifrada con SSL de 256 bits.
               </p>
             </div>
           </div>

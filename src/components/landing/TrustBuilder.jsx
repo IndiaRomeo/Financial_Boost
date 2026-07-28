@@ -4,30 +4,30 @@ const testimonials = [
   {
     name: 'María G.',
     state: 'Texas',
-    text: 'Me aprobaron rápido y sin complicaciones. Fue el proceso más fácil que he tenido para un préstamo en USA.',
+    text: 'Todo el trámite lo hice desde el celular y en menos de un día ya tenía respuesta. Nunca pensé que fuera tan fácil.',
     rating: 5,
     amount: '$3,000',
   },
   {
     name: 'Carlos R.',
     state: 'Florida',
-    text: 'Excelente atención, todo claro desde el inicio. Sin sorpresas ni letras pequeñas. 100% recomendado.',
+    text: 'Me explicaron cada condición antes de firmar. Ni una sorpresa, ni un cobro extra. Así se debe trabajar.',
     rating: 5,
     amount: '$5,000',
   },
   {
     name: 'Ana L.',
     state: 'California',
-    text: 'Gracias a Financial Boost pude cubrir una emergencia familiar. El proceso fue muy rápido y profesional.',
+    text: 'Necesitaba el dinero rápido por una emergencia y Financial Boost respondió en horas, no en semanas.',
     rating: 5,
     amount: '$2,000',
   },
 ]
 
 const pillars = [
-  { icon: Shield, title: 'Datos Protegidos', desc: 'SSL 256-bit. Tu información financiera siempre segura.' },
-  { icon: Users, title: 'Sin Intermediarios', desc: 'Prestamistas directos. Sin comisiones ocultas.' },
-  { icon: Award, title: 'Transparencia Total', desc: 'Tasas claras. Sin letras pequeñas.' },
+  { icon: Shield, title: 'Información blindada', desc: 'Cifrado SSL de 256 bits en cada dato que nos compartes.' },
+  { icon: Users, title: 'Cero intermediarios', desc: 'Trabajas directo con nosotros, sin comisiones escondidas.' },
+  { icon: Award, title: 'Reglas claras', desc: 'Tasas visibles desde el primer momento, sin letra chica.' },
 ]
 
 export default function TrustBuilder() {

@@ -11,7 +11,7 @@ import NewLoanRequestModal from '../components/client/NewLoanRequestModal.jsx'
 import DisbursementFormModal from '../components/client/DisbursementFormModal.jsx'
 import ContractModal from '../components/ContractModal.jsx'
 
-const WA_NUMBER = '13235031139'
+const WA_NUMBER = '13502035605'
 
 const STAGE_LABELS = {
   'nuevo': 'Solicitud recibida',
@@ -222,14 +222,14 @@ export default function DashboardPage() {
               <h1 className="text-2xl font-black text-primary">
                 Hola, {displayName.split(' ')[0]}
               </h1>
-              <p className="text-gray-500 mt-1">Aqui tienes un resumen de tu cuenta con Financial Boost.</p>
+              <p className="text-gray-500 mt-1">Este es el resumen de tu cuenta en Financial Boost.</p>
             </div>
 
             {latestLead && !activeLoan && (
               <div className="bg-gradient-to-r from-primary to-secondary rounded-2xl p-5 text-white flex items-center justify-between gap-4 animate-fade-up delay-100">
                 <div className="min-w-0">
-                  <p className="font-bold text-base sm:text-lg">Tu solicitud esta en proceso</p>
-                  <p className="text-primary-200 text-xs sm:text-sm mt-0.5 truncate">Un asesor te contactara pronto a {user?.email}</p>
+                  <p className="font-bold text-base sm:text-lg">Estamos revisando tu solicitud</p>
+                  <p className="text-primary-200 text-xs sm:text-sm mt-0.5 truncate">Te contactaremos pronto a {user?.email}</p>
                 </div>
                 <ChevronRight size={24} className="text-white/70 flex-shrink-0" />
               </div>
@@ -242,10 +242,10 @@ export default function DashboardPage() {
                 <div className={`rounded-2xl p-5 text-white flex items-center justify-between gap-4 animate-fade-up delay-100 bg-gradient-to-r ${isError ? 'from-red-700 to-red-500' : 'from-green-600 to-green-500'}`}>
                   <div className="min-w-0">
                     <p className="font-bold text-base sm:text-lg">
-                      {isError ? 'Problema con el desembolso' : 'Prestamo activo'}
+                      {isError ? 'Hubo un inconveniente con el envío' : 'Tu préstamo está activo'}
                     </p>
                     <p className={`text-sm mt-0.5 ${isError ? 'text-red-200' : 'text-green-100'}`}>
-                      {isError ? 'Dinero en espera · Un asesor te contactará pronto' : `Saldo: $${activeLoan.saldo_pendiente?.toLocaleString()}`}
+                      {isError ? 'Estamos resolviéndolo, un asesor te escribirá pronto' : `Saldo pendiente: $${activeLoan.saldo_pendiente?.toLocaleString()}`}
                     </p>
                   </div>
                   {!isError && (
@@ -281,16 +281,16 @@ export default function DashboardPage() {
                 <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <FileText size={28} className="text-gray-300" />
                 </div>
-                <h3 className="font-bold text-gray-700 mb-2">Aun no tienes solicitudes</h3>
-                <p className="text-gray-400 text-sm mb-5">Aplica ahora y recibe una respuesta en menos de 24 horas.</p>
-                <button onClick={() => setRequestOpen(true)} className="btn-cta inline-block">Solicitar prestamo</button>
+                <h3 className="font-bold text-gray-700 mb-2">Todavía no tienes ninguna solicitud</h3>
+                <p className="text-gray-400 text-sm mb-5">Inicia una ahora y te respondemos en menos de 24 horas.</p>
+                <button onClick={() => setRequestOpen(true)} className="btn-cta inline-block">Empezar solicitud</button>
               </div>
             )}
 
             <div className="bg-green-50 border border-green-200 rounded-2xl p-4 flex items-center justify-between animate-fade-up delay-400">
               <div>
-                <p className="font-bold text-green-800 text-sm">Necesitas ayuda?</p>
-                <p className="text-green-600 text-xs">Escribenos por WhatsApp</p>
+                <p className="font-bold text-green-800 text-sm">¿Tienes alguna duda?</p>
+                <p className="text-green-600 text-xs">Escríbenos directo por WhatsApp</p>
               </div>
               <a href={`https://wa.me/${WA_NUMBER}`} target="_blank" rel="noopener noreferrer" className="bg-green-500 hover:bg-green-600 text-white font-bold text-sm px-4 py-2 rounded-xl transition-colors">
                 Escribir
@@ -406,8 +406,8 @@ export default function DashboardPage() {
             {leads.length === 0 && loans.length === 0 && (
               <div className="card text-center py-12 animate-fade-up">
                 <FileText size={44} className="mx-auto text-gray-200 mb-4" />
-                <p className="text-gray-500">Sin solicitudes aun</p>
-                <button onClick={() => setRequestOpen(true)} className="btn-cta inline-block mt-5">Solicitar ahora</button>
+                <p className="text-gray-500">Todavía no has hecho ninguna solicitud</p>
+                <button onClick={() => setRequestOpen(true)} className="btn-cta inline-block mt-5">Empezar ahora</button>
               </div>
             )}
           </div>

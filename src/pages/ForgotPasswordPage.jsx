@@ -38,8 +38,8 @@ export default function ForgotPasswordPage() {
           <Link to="/" className="inline-block mb-6">
             <Logo className="h-14 w-auto mx-auto" />
           </Link>
-          <h1 className="text-3xl font-black text-white mb-2">Recuperar contraseña</h1>
-          <p className="text-primary-200">Te enviaremos un enlace a tu correo</p>
+          <h1 className="text-3xl font-black text-white mb-2">¿Olvidaste tu contraseña?</h1>
+          <p className="text-primary-200">No hay problema, te mandamos un enlace para restablecerla</p>
         </div>
 
         <div className="card shadow-2xl animate-scale-in delay-100">
@@ -48,11 +48,11 @@ export default function ForgotPasswordPage() {
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Mail size={28} className="text-green-600" />
               </div>
-              <h3 className="text-lg font-bold text-gray-800 mb-2">¡Correo enviado!</h3>
+              <h3 className="text-lg font-bold text-gray-800 mb-2">Revisa tu correo</h3>
               <p className="text-gray-500 text-sm mb-2">
-                Revisa tu bandeja de entrada en <strong className="text-gray-700">{email}</strong> y sigue el enlace para restablecer tu contraseña.
+                Te enviamos un enlace a <strong className="text-gray-700">{email}</strong>. Ábrelo para crear tu nueva contraseña.
               </p>
-              <p className="text-xs text-gray-400 mb-6">Si no lo ves, revisa la carpeta de spam o correo no deseado.</p>
+              <p className="text-xs text-gray-400 mb-6">¿No lo encuentras? Revisa también la carpeta de spam.</p>
               <Link to="/login" className="btn-cta inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-sm">
                 Volver al inicio de sesión
               </Link>
@@ -65,7 +65,7 @@ export default function ForgotPasswordPage() {
                 </div>
                 <div>
                   <h2 className="font-bold text-primary text-lg">Restablecer contraseña</h2>
-                  <p className="text-xs text-gray-400">Ingresa tu correo registrado</p>
+                  <p className="text-xs text-gray-400">Escribe el correo con el que te registraste</p>
                 </div>
               </div>
 

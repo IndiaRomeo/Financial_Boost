@@ -1,10 +1,10 @@
 import { CheckCircle2, DollarSign, MapPin, CreditCard, Building2 } from 'lucide-react'
 
 const reqs = [
-  { icon: DollarSign, text: 'Ingresos mínimos comprobables al mes' },
-  { icon: MapPin, text: 'Vivir dentro de los Estados Unidos' },
-  { icon: CreditCard, text: 'Documento de identificación válido (ID del estado o licencia)' },
-  { icon: Building2, text: 'Cuenta bancaria activa en USA' },
+  { icon: DollarSign, text: 'Ingresos mensuales que puedas comprobar' },
+  { icon: MapPin, text: 'Residir actualmente en Estados Unidos' },
+  { icon: CreditCard, text: 'Identificación vigente (licencia o ID estatal)' },
+  { icon: Building2, text: 'Cuenta bancaria activa a tu nombre' },
 ]
 
 export default function Requirements() {
@@ -13,11 +13,10 @@ export default function Requirements() {
       <div className="max-w-6xl mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           <div>
-            <p className="text-secondary font-semibold uppercase tracking-wider text-sm mb-2">Sin complicaciones</p>
-            <h2 className="section-title mb-4">Requisitos</h2>
+            <p className="text-secondary font-semibold uppercase tracking-wider text-sm mb-2">Lo que necesitas</p>
+            <h2 className="section-title mb-4">Requisitos para calificar</h2>
             <p className="text-gray-500 mb-8 leading-relaxed">
-              Somos prestamistas directos que entienden la realidad de la comunidad latina.
-              Nuestros requisitos son simples y transparentes.
+              Nada de trámites imposibles. Si cumples estos cuatro puntos, ya puedes iniciar tu solicitud.
             </p>
 
             <div className="space-y-4">
@@ -38,18 +37,18 @@ export default function Requirements() {
             </div>
 
             <a href="#formulario" className="btn-cta inline-block mt-8">
-              Verificar si califico
+              Quiero verificar si califico
             </a>
           </div>
 
           <div className="bg-gradient-to-br from-primary to-secondary rounded-3xl p-8 text-white">
-            <h3 className="text-2xl font-bold mb-6">¿Por qué elegirnos?</h3>
+            <h3 className="text-2xl font-bold mb-6">Lo que nos hace diferentes</h3>
             <div className="space-y-5">
               {[
-                { title: 'Sin intermediarios', desc: 'Somos prestamistas directos. Trato de primera mano.' },
-                { title: 'Transparencia total', desc: 'Sin letras pequeñas. Conoces tus condiciones desde el inicio.' },
-                { title: 'Atención en español', desc: 'Todo el proceso, de principio a fin, en tu idioma.' },
-                { title: 'Aprobación rápida', desc: 'Respuesta en 24 horas o menos en la mayoría de los casos.' },
+                { title: 'Trato directo', desc: 'Nada de bancos ni intermediarios entre tú y tu dinero.' },
+                { title: 'Reglas claras desde el día uno', desc: 'Conoces cada condición antes de firmar, sin sorpresas.' },
+                { title: '100% en tu idioma', desc: 'Todo el acompañamiento, en español, de principio a fin.' },
+                { title: 'Respuesta veloz', desc: 'La mayoría de los casos se resuelven en menos de 24 horas.' },
               ].map((item, i) => (
                 <div key={i} className="flex gap-4">
                   <div className="w-8 h-8 bg-accent rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">

@@ -68,8 +68,8 @@ export default function ResetPasswordPage() {
           <Link to="/" className="inline-block mb-6">
             <Logo className="h-14 w-auto mx-auto" />
           </Link>
-          <h1 className="text-3xl font-black text-white mb-2">Nueva contraseña</h1>
-          <p className="text-primary-200">Elige una contraseña segura</p>
+          <h1 className="text-3xl font-black text-white mb-2">Crea tu nueva clave</h1>
+          <p className="text-primary-200">Que sea algo que solo tú recuerdes</p>
         </div>
 
         <div className="card shadow-2xl animate-scale-in delay-100">
@@ -78,9 +78,9 @@ export default function ResetPasswordPage() {
               <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <KeyRound size={28} className="text-red-500" />
               </div>
-              <h3 className="text-lg font-bold text-gray-800 mb-2">Enlace inválido o expirado</h3>
+              <h3 className="text-lg font-bold text-gray-800 mb-2">Ese enlace ya no sirve</h3>
               <p className="text-gray-500 text-sm mb-6">
-                Este enlace de recuperación no es válido o ya expiró. Solicita uno nuevo.
+                Puede que haya expirado o que ya lo hayas usado. Pide uno nuevo para continuar.
               </p>
               <Link to="/forgot-password" className="btn-cta inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-sm">
                 Solicitar nuevo enlace
@@ -93,9 +93,9 @@ export default function ResetPasswordPage() {
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <CheckCircle size={28} className="text-green-600" />
               </div>
-              <h3 className="text-lg font-bold text-gray-800 mb-2">¡Contraseña actualizada!</h3>
+              <h3 className="text-lg font-bold text-gray-800 mb-2">Listo, quedó guardada</h3>
               <p className="text-gray-500 text-sm mb-6">
-                Tu contraseña fue cambiada exitosamente. Serás redirigido al inicio de sesión en unos segundos.
+                Ya puedes iniciar sesión con tu nueva contraseña. Te llevamos allá en unos segundos.
               </p>
               <Link to="/login" className="btn-cta inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-sm">
                 Ir a iniciar sesión

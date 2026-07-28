@@ -5,7 +5,7 @@ import { getDefaultAdminRoute } from '../../config/adminRouting.js'
 export default function SuccessScreen({ data, adminRoute }) {
   const contact = adminRoute || getDefaultAdminRoute()
   const waMessage = encodeURIComponent(
-    `Hola! Soy ${data.nombre} de ${data.estado}. Ya llene el formulario de solicitud de prestamo en Financial Boost y quiero continuar con mi aplicacion.`
+    `Hola! Soy ${data.nombre}, de ${data.estado}. Acabo de completar mi solicitud de prestamo en Financial Boost y quiero darle seguimiento.`
   )
 
   return (
@@ -18,15 +18,15 @@ export default function SuccessScreen({ data, adminRoute }) {
         </div>
 
         <h2 className="text-3xl font-black text-primary mb-3 animate-fade-up delay-100">
-          Solicitud enviada
+          ¡Ya casi está listo!
         </h2>
 
         <p className="text-gray-600 text-lg mb-2 animate-fade-up delay-200">
-          Hola <span className="font-bold text-primary">{data.nombre}</span>, recibimos tu solicitud.
+          <span className="font-bold text-primary">{data.nombre}</span>, tu solicitud llegó correctamente.
         </p>
 
         <p className="text-gray-500 mb-8 max-w-md mx-auto leading-relaxed animate-fade-up delay-300">
-          Tu cuenta fue creada con <span className="font-semibold text-secondary">{data.email}</span>. Puedes ingresar con ese correo y la contrasena que acabas de crear.
+          Creamos tu cuenta con <span className="font-semibold text-secondary">{data.email}</span>. Entra con ese correo y la contraseña que elegiste para seguir el avance.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 animate-fade-up delay-400">

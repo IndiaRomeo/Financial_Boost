@@ -5,8 +5,8 @@ export const ADMIN_ROUTES = [
   {
     id: DEFAULT_ADMIN_ID,
     slug: 'admin1',
-    whatsapp: '13235031139',
-    whatsappLabel: '+1 (323) 503-1139',
+    whatsapp: '13502035605',
+    whatsappLabel: '+1 (350) 203-5605',
   },
   {
     id: 'de4c7784-f1ef-45c9-ba13-6dd91d4b0215',

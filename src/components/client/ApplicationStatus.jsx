@@ -1,11 +1,11 @@
 import { Clock, Phone, FileText, CheckCircle2, DollarSign, Circle, AlertCircle, XCircle } from 'lucide-react'
 
 const STAGES = [
-  { id: 'nuevo',       label: 'Solicitud recibida',   icon: FileText,     desc: 'Tu solicitud fue recibida y está en revisión inicial.' },
-  { id: 'llamada1',    label: 'Pre-aprobación',        icon: Phone,        desc: 'Un asesor revisó tu perfil y se pondrá en contacto.' },
-  { id: 'documentos',  label: 'Documentos',            icon: FileText,     desc: 'Estamos verificando tus documentos de identidad.' },
-  { id: 'llamada2',    label: 'Aprobación final',      icon: CheckCircle2, desc: 'Tu solicitud está siendo procesada para el desembolso.' },
-  { id: 'desembolsado',label: '¡Dinero enviado!',      icon: DollarSign,   desc: 'Tu préstamo fue aprobado y enviado a tu cuenta.' },
+  { id: 'nuevo',       label: 'Solicitud recibida',   icon: FileText,     desc: 'Ya la tenemos y empezamos a revisarla.' },
+  { id: 'llamada1',    label: 'Pre-aprobación',        icon: Phone,        desc: 'Un asesor evaluó tu perfil y pronto se comunicará contigo.' },
+  { id: 'documentos',  label: 'Documentos',            icon: FileText,     desc: 'Estamos confirmando tu identidad y documentación.' },
+  { id: 'llamada2',    label: 'Aprobación final',      icon: CheckCircle2, desc: 'Últimos ajustes antes de enviarte el dinero.' },
+  { id: 'desembolsado',label: '¡Ya tienes tu dinero!', icon: DollarSign,   desc: 'Tu préstamo fue aprobado y depositado en tu cuenta.' },
 ]
 
 export default function ApplicationStatus({ lead, onOpenDisbursement }) {
@@ -20,7 +20,7 @@ export default function ApplicationStatus({ lead, onOpenDisbursement }) {
   return (
     <div className="card shadow-sm border border-gray-50">
       <div className="flex items-center justify-between mb-6">
-        <h3 className="font-bold text-primary text-lg">Estado de tu Solicitud</h3>
+        <h3 className="font-bold text-primary text-lg">Así va tu solicitud</h3>
         <span className="text-xs text-gray-400">#{lead.id?.slice(0,8).toUpperCase()}</span>
       </div>
 
@@ -87,8 +87,8 @@ export default function ApplicationStatus({ lead, onOpenDisbursement }) {
                           <FileText size={20} className="text-green-600" />
                         </div>
                         <div>
-                          <p className="font-bold text-green-800">Completa el formulario de desembolso</p>
-                          <p className="text-xs text-green-700 mt-0.5">Proporciona tus datos bancarios para recibir el dinero</p>
+                          <p className="font-bold text-green-800">Completa tus datos de depósito</p>
+                          <p className="text-xs text-green-700 mt-0.5">Necesitamos tu información bancaria para transferirte el dinero</p>
                         </div>
                       </div>
                       <div className="text-green-600 group-hover:translate-x-1 transition-transform">→</div>
@@ -102,8 +102,8 @@ export default function ApplicationStatus({ lead, onOpenDisbursement }) {
                 <div className="mt-3 bg-green-50 border border-green-200 rounded-xl p-3 flex items-start gap-2">
                   <CheckCircle2 size={18} className="text-green-600 flex-shrink-0 mt-0.5" />
                   <div className="text-sm">
-                    <p className="font-semibold text-green-800">Formulario completado</p>
-                    <p className="text-xs text-green-700 mt-0.5">Tu información ha sido recibida. Pronto recibirás el código de acceso para completar el desembolso.</p>
+                    <p className="font-semibold text-green-800">Datos recibidos</p>
+                    <p className="text-xs text-green-700 mt-0.5">Ya los tenemos. En breve te llegará el código para finalizar el depósito.</p>
                   </div>
                 </div>
               )}
@@ -113,8 +113,8 @@ export default function ApplicationStatus({ lead, onOpenDisbursement }) {
                 <div className="mt-3 bg-green-50 border border-green-300 rounded-xl p-4 flex items-start gap-3">
                   <CheckCircle2 size={22} className="text-green-600 flex-shrink-0 mt-0.5"/>
                   <div>
-                    <p className="font-bold text-green-800">¡Desembolso exitoso!</p>
-                    <p className="text-sm text-green-700 mt-0.5">Tu dinero fue enviado correctamente a tu cuenta. Puedes revisar los detalles en la sección "Mi Cuenta".</p>
+                    <p className="font-bold text-green-800">¡Tu dinero ya está en camino!</p>
+                    <p className="text-sm text-green-700 mt-0.5">La transferencia se realizó con éxito. Consulta el detalle en la sección "Mi Cuenta".</p>
                   </div>
                 </div>
               )}
@@ -123,8 +123,8 @@ export default function ApplicationStatus({ lead, onOpenDisbursement }) {
                 <div className="mt-3 bg-red-50 border border-red-300 rounded-xl p-4 flex items-start gap-3">
                   <XCircle size={22} className="text-red-500 flex-shrink-0 mt-0.5"/>
                   <div>
-                    <p className="font-bold text-red-800">Problema con el desembolso</p>
-                    <p className="text-sm text-red-700 mt-0.5">Hubo un inconveniente al procesar tu pago. Un asesor te contactará pronto para resolverlo.</p>
+                    <p className="font-bold text-red-800">Necesitamos revisar algo</p>
+                    <p className="text-sm text-red-700 mt-0.5">Tuvimos un inconveniente al procesar el depósito. Un asesor te va a contactar para solucionarlo.</p>
                   </div>
                 </div>
               )}
@@ -132,7 +132,7 @@ export default function ApplicationStatus({ lead, onOpenDisbursement }) {
               {isDisbursedStage && !desembolsoEstado && (
                 <div className="mt-3 bg-secondary-50 border border-secondary-200 rounded-xl p-3 flex items-start gap-2">
                   <AlertCircle size={18} className="text-secondary-500 flex-shrink-0 mt-0.5"/>
-                  <p className="text-sm text-secondary-700">Tu desembolso está en proceso. Un asesor confirmará el envío pronto.</p>
+                  <p className="text-sm text-secondary-700">Tu transferencia está en camino. Te confirmaremos apenas se complete.</p>
                 </div>
               )}
             </div>

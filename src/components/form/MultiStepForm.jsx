@@ -7,7 +7,7 @@ import Step4 from './Step4.jsx'
 import SuccessScreen from './SuccessScreen.jsx'
 import { supabase } from '../../lib/supabase.js'
 
-const STEPS = ['Datos Personales', 'Situacion Laboral', 'Perfil Bancario', 'Tu Prestamo']
+const STEPS = ['Tus Datos', 'Tu Trabajo', 'Tu Banco', 'Cuánto Necesitas']
 
 const initialData = {
   nombre: '', email: '', password: '', confirmPassword: '', telefono: '', estado: '',
@@ -25,18 +25,18 @@ function getSubmitErrorMessage(err) {
   const normalized = message.toLowerCase()
 
   if (normalized.includes('email rate limit exceeded')) {
-    return 'Supabase alcanzo el limite de emails de autenticacion. Desactiva "Confirm email" en Authentication > Providers > Email, o espera unos minutos antes de intentar de nuevo.'
+    return 'Se alcanzo el limite de correos de autenticacion. Desactiva "Confirm email" en Authentication > Providers > Email, o espera unos minutos antes de intentar de nuevo.'
   }
 
   if (normalized.includes('invalid') && normalized.includes('email')) {
-    return 'El correo no fue aceptado por Supabase. Usa un correo real y evita correos de prueba como test@gmail.com.'
+    return 'Ese correo no fue aceptado. Usa una direccion real, evita correos de prueba como test@gmail.com.'
   }
 
   if (normalized.includes('already') || normalized.includes('registered')) {
-    return 'Ya existe una cuenta con ese correo. Inicia sesion o usa la misma contrasena que creaste antes.'
+    return 'Ya hay una cuenta registrada con ese correo. Inicia sesion o usa la contrasena que creaste anteriormente.'
   }
 
-  return message || 'Ocurrio un error al enviar tu solicitud. Intenta nuevamente.'
+  return message || 'Algo salio mal al enviar tu solicitud. Por favor intenta de nuevo.'
 }
 
 export default function MultiStepForm({ assignedAdminId = null, adminRoute = null }) {
@@ -182,7 +182,7 @@ export default function MultiStepForm({ assignedAdminId = null, adminRoute = nul
 
         <div className="mt-8 flex items-center justify-center gap-2 text-gray-400">
           <Lock size={13} />
-          <p className="text-xs">Tus datos estan protegidos y encriptados con SSL de 256 bits</p>
+          <p className="text-xs">Conexion cifrada con SSL de 256 bits, tu informacion viaja segura</p>
           <Shield size={13} />
         </div>
       </div>

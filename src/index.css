@@ -38,8 +38,8 @@
   100% { background-position: 0% 50%; }
 }
 @keyframes glowPulse {
-  0%, 100% { box-shadow: 0 0 20px rgba(217,119,6,0.35); }
-  50%       { box-shadow: 0 0 45px rgba(217,119,6,0.65), 0 0 80px rgba(217,119,6,0.2); }
+  0%, 100% { box-shadow: 0 0 18px rgba(253,246,234,0.45); }
+  50%       { box-shadow: 0 0 38px rgba(253,246,234,0.75), 0 0 70px rgba(253,246,234,0.25); }
 }
 @keyframes shimmer {
   from { background-position: -200% center; }
@@ -90,11 +90,12 @@
 .delay-700 { animation-delay: 700ms; }
 .delay-800 { animation-delay: 800ms; }
 
-/* Gradient animated background */
+/* Signature dark-red backdrop — stays in the primary red family so it never
+   clashes with the solid-red header, plus a faint diagonal sheen for texture. */
 .bg-animated-gradient {
-  background: linear-gradient(135deg, #7f1d1d, #991b1b, #44403c, #450a0a);
-  background-size: 300% 300%;
-  animation: gradientShift 8s ease infinite;
+  background:
+    linear-gradient(115deg, transparent 42%, rgba(253,246,234,0.05) 50%, transparent 58%),
+    linear-gradient(155deg, #450a0a 0%, #7f1d1d 40%, #991b1b 72%, #6b1717 100%);
 }
 
 /* Shimmer button */
@@ -148,12 +149,15 @@
 
 @layer components {
   .btn-cta {
-    @apply font-bold py-4 px-8 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 text-white;
-    background: linear-gradient(135deg, #d97706, #b45309);
+    @apply font-bold py-4 px-8 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0;
+    background: linear-gradient(135deg, #fdf6ea, #f5e6c8);
+    color: #7f1d1d;
+    border: 2px solid rgba(127,29,29,0.22);
     animation: glowPulse 2.5s ease-in-out infinite;
   }
   .btn-cta:hover {
-    background: linear-gradient(135deg, #fbbf24, #d97706);
+    background: linear-gradient(135deg, #ffffff, #fdf6ea);
+    border-color: rgba(127,29,29,0.38);
   }
   .btn-primary {
     @apply bg-primary hover:bg-primary-950 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200;

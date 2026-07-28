@@ -46,8 +46,8 @@ export default function LoginPage() {
           <Link to="/" className="inline-block mb-6">
             <Logo className="h-14 w-auto mx-auto" />
           </Link>
-          <h1 className="text-3xl font-black text-white mb-2">Portal Financial Boost</h1>
-          <p className="text-primary-200">Ingresa con tu correo y contrasena</p>
+          <h1 className="text-3xl font-black text-white mb-2">Bienvenido de vuelta</h1>
+          <p className="text-primary-200">Accede a tu cuenta de Financial Boost</p>
         </div>
 
         <div className="card shadow-2xl animate-scale-in delay-100">
@@ -58,7 +58,7 @@ export default function LoginPage() {
               </div>
               <div>
                 <h2 className="font-bold text-primary text-lg">Iniciar sesion</h2>
-                <p className="text-xs text-gray-400">Clientes y administradores</p>
+                <p className="text-xs text-gray-400">Acceso para clientes y equipo</p>
               </div>
             </div>
 
@@ -115,9 +115,9 @@ export default function LoginPage() {
             </button>
 
             <div className="mt-6 text-center text-sm text-gray-400">
-              Aun no tienes cuenta?{' '}
+              ¿Todavía no tienes cuenta?{' '}
               <a href="/#formulario" className="text-secondary font-semibold hover:text-primary transition-colors">
-                Solicita tu prestamo aqui
+                Empieza tu solicitud aquí
               </a>
             </div>
           </form>

@@ -19,8 +19,8 @@ export default function LoanCalculator() {
 
   return (
     <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 text-white">
-      <h3 className="text-xl font-bold mb-1">Calculadora de Prestamo</h3>
-      <p className="text-primary-200 text-sm mb-5">Desliza para ver tu cuota estimada</p>
+      <h3 className="text-xl font-bold mb-1">Simula tu préstamo</h3>
+      <p className="text-primary-200 text-sm mb-5">Mueve la barra y mira cuánto pagarías al mes</p>
 
       <div className="mb-5">
         <div className="flex justify-between mb-2">
@@ -76,11 +76,11 @@ export default function LoanCalculator() {
 
       {user ? (
         <Link to="/dashboard" className="btn-cta w-full text-center block mt-4">
-          Solicitar este prestamo
+          Quiero este préstamo
         </Link>
       ) : (
         <a href="#formulario" className="btn-cta w-full text-center block mt-4">
-          Solicitar este prestamo
+          Quiero este préstamo
         </a>
       )}
     </div>

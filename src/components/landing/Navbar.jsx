@@ -46,7 +46,7 @@ export default function Navbar() {
               <Link to="/login" className="flex items-center gap-1.5 text-primary-200 hover:text-white text-sm font-medium transition-colors">
                 <User size={14} /> Iniciar sesión
               </Link>
-              <a href="#formulario" className="btn-cta text-sm py-2.5 px-5">Aplicar ahora</a>
+              <a href="#formulario" className="btn-cta text-sm py-2.5 px-5">Empezar solicitud</a>
             </div>
           )}
         </div>
@@ -70,7 +70,7 @@ export default function Navbar() {
           ) : (
             <>
               <Link to="/login" onClick={() => setOpen(false)} className="text-primary-200 font-medium flex items-center gap-2"><User size={14}/> Iniciar sesión</Link>
-              <a href="#formulario" onClick={() => setOpen(false)} className="btn-cta text-center">Aplicar ahora</a>
+              <a href="#formulario" onClick={() => setOpen(false)} className="btn-cta text-center">Empezar solicitud</a>
             </>
           )}
         </div>

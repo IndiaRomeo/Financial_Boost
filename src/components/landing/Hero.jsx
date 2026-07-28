@@ -16,29 +16,29 @@ export default function Hero() {
           <div>
             <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 mb-7 animate-fade-up">
               <span className="w-2 h-2 bg-accent rounded-full animate-pulse"></span>
-              <span className="text-primary-100 text-sm font-medium">Prestamistas directos · Sin intermediarios</span>
+              <span className="text-primary-100 text-sm font-medium">Financiamiento directo · Cero intermediarios</span>
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-6 animate-fade-up delay-100">
-              Préstamos rápidos para latinos en{' '}
-              <span className="text-accent">Estados Unidos</span> 🇺🇸
+              El impulso financiero que tu familia{' '}
+              <span className="text-accent">necesita hoy</span> 🇺🇸
             </h1>
 
             <p className="text-xl text-primary-100 mb-9 leading-relaxed animate-fade-up delay-200">
-              Somos un fondo de inversores colombianos que se ha enfocado en ayudar a la comunidad latina en Estados Unidos a acceder a créditos rápidos y seguros.
+              Conectamos a la comunidad hispana en Estados Unidos con capital rápido y accesible, sin bancos tradicionales ni procesos eternos de por medio.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-up delay-300">
               <a href="#formulario" className="btn-cta text-center text-lg animate-glow-pulse">
-                Aplicar ahora →
+                Empezar solicitud →
               </a>
               <a href="#como-funciona" className="border-2 border-white/40 hover:border-white hover:bg-white/10 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 text-center">
-                ¿Cómo funciona?
+                Ver el proceso
               </a>
             </div>
 
             <div className="flex items-center gap-6 sm:gap-8 mt-10 md:mt-12 animate-fade-up delay-400">
-              {[['500+','Clientes atendidos'],['24h','Aprobación rápida'],['100%','En español']].map(([val, label]) => (
+              {[['500+','Familias apoyadas'],['24h','Respuesta express'],['100%','Trato en español']].map(([val, label]) => (
                 <div key={label} className="text-center">
                   <p className="text-3xl font-black text-accent">{val}</p>
                   <p className="text-primary-200 text-xs mt-0.5">{label}</p>

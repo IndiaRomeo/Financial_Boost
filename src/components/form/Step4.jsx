@@ -24,8 +24,8 @@ export default function Step4({ data, update, onSubmit, onBack, loading = false,
 
   return (
     <div>
-      <h2 className="text-2xl font-bold text-primary mb-1">Tu Préstamo</h2>
-      <p className="text-gray-500 mb-6">¡Estamos casi listos! Cuéntanos sobre el préstamo que necesitas.</p>
+      <h2 className="text-2xl font-bold text-primary mb-1">Ya casi terminamos</h2>
+      <p className="text-gray-500 mb-6">Cuéntanos cuánto necesitas y para qué lo vas a usar.</p>
 
       <div className="space-y-6">
         <div>
