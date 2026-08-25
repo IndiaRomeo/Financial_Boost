@@ -39,7 +39,7 @@ function getSubmitErrorMessage(err) {
   return message || 'Algo salio mal al enviar tu solicitud. Por favor intenta de nuevo.'
 }
 
-export default function MultiStepForm({ assignedAdminId = null, adminRoute = null }) {
+export default function MultiStepForm({ assignedAdminId = null, adminRoute = null, onSuccess = null }) {
   const [step, setStep] = useState(1)
   const [data, setData] = useState(initialData)
   const [submitted, setSubmitted] = useState(false)
@@ -140,6 +140,7 @@ export default function MultiStepForm({ assignedAdminId = null, adminRoute = nul
       if (dbErr) throw dbErr
 
       setSubmitted(true)
+      onSuccess?.()
     } catch (err) {
       setError(getSubmitErrorMessage(err))
       console.error(err)

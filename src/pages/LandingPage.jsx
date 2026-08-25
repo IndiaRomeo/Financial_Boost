@@ -10,6 +10,7 @@ import WhatsAppButton from '../components/landing/WhatsAppButton.jsx'
 import MultiStepForm from '../components/form/MultiStepForm.jsx'
 import LoanCalculator from '../components/landing/LoanCalculator.jsx'
 import { Shield } from 'lucide-react'
+import { useState } from 'react'
 import { useAuth } from '../context/AuthContext.jsx'
 import { useSearchParams } from 'react-router-dom'
 import { resolveAdminRoute } from '../config/adminRouting.js'
@@ -18,6 +19,7 @@ export default function LandingPage() {
   const { user } = useAuth()
   const [searchParams] = useSearchParams()
   const adminRoute = resolveAdminRoute(searchParams)
+  const [justRegistered, setJustRegistered] = useState(false)
 
   return (
     <div className="min-h-screen">
@@ -28,7 +30,7 @@ export default function LandingPage() {
       <TrustBuilder />
 
       {/* Form section */}
-      {!user && <section id="formulario" className="py-20 bg-gradient-to-br from-primary via-primary-800 to-secondary relative overflow-hidden">
+      {(!user || justRegistered) && <section id="formulario" className="py-20 bg-gradient-to-br from-primary via-primary-800 to-secondary relative overflow-hidden">
         <div className="absolute inset-0 opacity-5" style={{backgroundImage:'radial-gradient(circle, white 1px, transparent 1px)', backgroundSize:'32px 32px'}}></div>
         <div className="max-w-6xl mx-auto px-4 relative z-10">
           <div className="text-center mb-12">
@@ -43,7 +45,7 @@ export default function LandingPage() {
 
           <div className="grid lg:grid-cols-5 gap-10 items-start">
             <div className="lg:col-span-3">
-              <MultiStepForm assignedAdminId={adminRoute.id} adminRoute={adminRoute} />
+              <MultiStepForm assignedAdminId={adminRoute.id} adminRoute={adminRoute} onSuccess={() => setJustRegistered(true)} />
             </div>
             <div className="hidden lg:block lg:col-span-2">
               <div className="animate-float">
